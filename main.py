@@ -5,8 +5,9 @@ from selenium.webdriver.chrome.options import Options
 
 app = FastAPI()
 
-CHROMIUM_BINARY = "/usr/bin/chromium"      # from apt install chromium
-CHROMEDRIVER_PATH = "/usr/bin/chromedriver"  # from apt install chromium-driver
+CHROMIUM_BINARY = os.getenv("CHROMIUM_BINARY", "/usr/bin/chromium")
+CHROMEDRIVER_PATH = os.getenv("CHROMEDRIVER_PATH", "/usr/bin/chromedriver")
+
 
 def create_driver():
     options = Options()
