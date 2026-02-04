@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
+import os
 
 app = FastAPI()
 
